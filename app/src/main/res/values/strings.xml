@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BFTR_E1</string>
+    <string name="version">Versión 1.0</string>
+    <string name="creador">Creado por: Brayan F. Tenorio Ruiz</string>
+    <string name="Nombre">Nombre(s)</string>
+    <string name="Apellidos">Apellidos</string>
+    <string name="Encabezado">FORMULARIO</string>
+    <string name="Correo">Correo electrónico</string>
+    <string name="NoCuenta">Número de Cuenta</string>
+</resources>
