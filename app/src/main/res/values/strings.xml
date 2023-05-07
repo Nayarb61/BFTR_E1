@@ -7,4 +7,31 @@
     <string name="Encabezado">FORMULARIO</string>
     <string name="Correo">Correo electrónico</string>
     <string name="NoCuenta">Número de Cuenta</string>
+    <string name="Carrera">Carrera</string>
+    <string name="BtnRegistrar">Registrar</string>
+    <string name="faltaCarrera">Por favor seleccione una carrera</string>
+    <string name="error">Favor de Completar todos los campos</string>
+    <string name="RegCompleto">Registro Exitoso</string>
+    <string name="NcuentaError">Ingresar un número de cuenta válido</string>
+    <string name="EmailError">correo NO válido</string>
+
+    <string-array name="opciones">
+        <item>Selecciona una opción</item>
+        <item>Ingeniería Aeroespacial </item>
+        <item>Ingeniería Civil </item>
+        <item>Ingeniería Geomática </item>
+        <item>Ingeniería Ambiental </item>
+        <item>Ingeniería Geofísica </item>
+        <item>Ingeniería Geológica </item>
+        <item>Ingeniería Petrolera </item>
+        <item>Ingeniería de Minas y Metalurgia </item>
+        <item>Ingeniería en Computación </item>
+        <item>Ingeniería Eléctrica Electrónica </item>
+        <item>Ingeniería en Telecomunicaciones </item>
+        <item>Ingeniería Mecánica </item>
+        <item>Ingeniería Industrial </item>
+        <item>Ingeniería Mecatrónica </item>
+        <item>Ingeniería en Sistemas Biomédicos </item>
+
+    </string-array>
 </resources>

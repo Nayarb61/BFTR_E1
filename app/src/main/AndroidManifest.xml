@@ -18,6 +18,11 @@
         </activity>
 
         <activity
+            android:name=".PDatos"
+            android:exported="false">
+        </activity>
+
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
