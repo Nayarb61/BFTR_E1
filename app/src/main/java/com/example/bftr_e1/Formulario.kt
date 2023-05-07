@@ -1,5 +1,6 @@
 package com.example.bftr_e1
 
+import android.app.DatePickerDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,10 +8,9 @@ import android.text.TextUtils
 import android.util.Log
 import android.util.Patterns
 import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.Toast
+import android.widget.*
 import com.example.bftr_e1.databinding.ActivityFormularioBinding
+import java.util.*
 
 class Formulario : AppCompatActivity() {
   //  private lateinit var datePicker: DatePicker
@@ -52,9 +52,38 @@ class Formulario : AppCompatActivity() {
         return Ncuenta.length == 9
     }
 
+    fun clickCalendar(view: View){
+        val fechaActual = Calendar.getInstance()
+
+        // Configura la fecha mínima permitida para 1900
+        val fechaMinima = Calendar.getInstance()
+        fechaMinima.set(Calendar.YEAR, 1960)
+
+        // Crea una instancia de DatePickerDialog y configura las fechas mínima y máxima permitidas
+        val datePickerDialog = DatePickerDialog(
+            this,
+            DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
+                // La fecha seleccionada se devuelve en los parámetros year, month y dayOfMonth
+                val FechaSeleccionada = "$dayOfMonth/${month+1}/$year"
+                binding.etFNacimiento.setText(FechaSeleccionada)
+            },
+            fechaActual.get(Calendar.YEAR),
+            fechaActual.get(Calendar.MONTH),
+            fechaActual.get(Calendar.DAY_OF_MONTH)
+        )
+
+        datePickerDialog.datePicker.minDate = fechaMinima.timeInMillis
+        datePickerDialog.datePicker.maxDate = fechaActual.timeInMillis
+
+        val btnFecha = findViewById<ImageButton>(R.id.imButton)
+        btnFecha.setOnClickListener {
+            datePickerDialog.show()
+        }
+
+    }
     fun click(view: View) {
         if(binding.etNombre.text.isEmpty() || binding.etApellidos.text.isEmpty() ||
-            binding.etEmail.text.isEmpty() || binding.etNoCuenta.text.isEmpty()){
+            binding.etEmail.text.isEmpty() || binding.etNoCuenta.text.isEmpty()|| binding.etFNacimiento.text.isEmpty()){
             Toast.makeText(this,getString(R.string.error),Toast.LENGTH_LONG).show()
         }
         else{
