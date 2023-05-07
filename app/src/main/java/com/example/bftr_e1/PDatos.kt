@@ -34,6 +34,9 @@ class PDatos : AppCompatActivity() {
                 binding.tvNombre.text = usuario.nombre
                 binding.tvApellido.text = usuario.apellidos
                 binding.tvCuenta.text = usuario.ncuenta
+                binding.tvEdad.text = usuario.edad.toString()
+                binding.tvSignoZodiacal.text = usuario.SignoZ
+                binding.tvHChino.text = usuario.HChino
             }
         }
     }

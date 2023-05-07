@@ -16,6 +16,10 @@
     <string name="EmailError">correo NO válido</string>
     <string name="Nacimiento">Fecha de Nacimiento</string>
     <string name="FNacimiento">Seleccione su fecha de nacimiento</string>
+    <string name="SignoZodiaco">Zigno Zodiacal</string>
+    <string name="Edad">Edad</string>
+    <string name="BtnAtras">Atrás</string>
+    <string name="Hchino">Horoscopo Chino</string>
 
     <string-array name="opciones">
         <item>Selecciona una opción</item>

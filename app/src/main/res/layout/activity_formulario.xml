@@ -135,8 +135,8 @@
 
     <ImageButton
         android:id="@+id/imButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="71dp"
+        android:layout_height="66dp"
         android:onClick="clickCalendar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -148,17 +148,18 @@
 
     <EditText
         android:id="@+id/etFNacimiento"
-        android:layout_width="wrap_content"
+        android:layout_width="270dp"
         android:layout_height="wrap_content"
+        android:autofillHints="no"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="@string/FNacimiento"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imButton"
-        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.667" />
+        app:layout_constraintVertical_bias="0.657" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

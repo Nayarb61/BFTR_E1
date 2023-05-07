@@ -5,4 +5,12 @@ import android.widget.EditText
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-class Usuario(var nombre: String?, var apellidos: String?, var ncuenta: String?):Parcelable
+class Usuario(
+    var nombre: String?,
+    var apellidos: String?,
+    var ncuenta: String?,
+    var edad: Int?,
+    var SignoZ: String?,
+    var HChino: String?
+) :
+    Parcelable
