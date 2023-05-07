@@ -5,7 +5,6 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.*
 import com.example.bftr_e1.databinding.ActivityFormularioBinding
 import com.example.bftr_e1.databinding.ActivityPdatosBinding
 
@@ -31,13 +30,14 @@ class PDatos : AppCompatActivity() {
             }
 
             if (usuario != null) {
-                binding.tvNombre.text = usuario.nombre
-                binding.tvApellido.text = usuario.apellidos
-                binding.tvCuenta.text = usuario.ncuenta
-                binding.tvEdad.text = usuario.edad.toString()
-                binding.tvSignoZodiacal.text = usuario.SignoZ
-                binding.tvHChino.text = usuario.HChino
-                binding.tvCorreo.text = usuario.correo
+                binding.tvNombre.text = getString(R.string.MsgNombre, usuario.nombre)
+                binding.tvApellido.text = getString(R.string.MsgApellidos, usuario.apellidos)
+                binding.tvCuenta.text = getString(R.string.MsgNoCuenta, usuario.ncuenta.toString())
+                binding.tvEdad.text = getString(R.string.MsgEdad,usuario.edad.toString())
+                binding.tvSignoZodiacal.text = getString(R.string.MsgSignoZodiaco, usuario.SignoZ.toString())
+                binding.tvHChino.text = getString(R.string.MsgHchino, usuario.HChino.toString())
+                binding.tvCorreo.text = getString(R.string.MsgCorreo,usuario.correo.toString())
+                binding.tvIngenieria.text = usuario.carrera
                 usuario.imagen?.let { binding.ivImagenCarrera.setImageResource(it) }
             }
         }

@@ -5,7 +5,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
-import android.util.Log
 import android.util.Patterns
 import android.view.View
 import android.widget.*
@@ -18,6 +17,7 @@ class Formulario : AppCompatActivity() {
     private lateinit var binding: ActivityFormularioBinding
     var FechaSeleccionada = ""
     var imagenCarrera = 0
+    var ing_carrera = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_formulario)
@@ -59,6 +59,7 @@ class Formulario : AppCompatActivity() {
                 position: Int,
                 id: Long
             ) {
+                ing_carrera = parent?.getItemAtPosition(position).toString()
                 imagenCarrera = imagenes[position]
 
             }
@@ -138,6 +139,7 @@ class Formulario : AppCompatActivity() {
                         val us_apellido = binding.etApellidos.text.toString()
                         val us_cuenta = binding.etNoCuenta.text.toString()
                         val us_correo = binding.etEmail.text.toString()
+                        val us_carrera = ing_carrera
 
                         val usuario = Usuario(
                             us_nombre,
@@ -147,6 +149,7 @@ class Formulario : AppCompatActivity() {
                             us_signoZ,
                             us_HChino,
                             us_correo,
+                            us_carrera,
                             us_Imagen
                         )
                         bundle.putParcelable("usuario", usuario)
@@ -179,7 +182,6 @@ class Formulario : AppCompatActivity() {
         val formatoFecha = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
         val fechaNac = formatoFecha.parse(fechaNacimiento)
         val cFechaNac = Calendar.getInstance()
-        val cFechaActual = Calendar.getInstance()
         cFechaNac.time = fechaNac
 
         val dia = cFechaNac.get(Calendar.DAY_OF_MONTH)

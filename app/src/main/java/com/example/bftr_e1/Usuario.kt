@@ -1,8 +1,6 @@
 package com.example.bftr_e1
 
 import android.os.Parcelable
-import android.widget.EditText
-import android.widget.ImageView
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
@@ -14,6 +12,7 @@ class Usuario(
     var SignoZ: String?,
     var HChino: String?,
     var correo: String?,
+    var carrera: String?,
     var imagen:Int?
 ) :
     Parcelable
