@@ -17,14 +17,31 @@ class Formulario : AppCompatActivity() {
     //  private lateinit var datePicker: DatePicker
     private lateinit var binding: ActivityFormularioBinding
     var FechaSeleccionada = ""
-
+    var imagenCarrera = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_formulario)
         binding = ActivityFormularioBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
+        val imagenes = arrayOf(
+            R.drawable.fi,
+            R.drawable.ing1aeroespacial,
+            R.drawable.ing2civil,
+            R.drawable.ing3geomatica,
+            R.drawable.ing4ambiental,
+            R.drawable.ing5geofisica,
+            R.drawable.ing6geologica,
+            R.drawable.ing7petrolera,
+            R.drawable.ing8minas,
+            R.drawable.ing9computo,
+            R.drawable.ing10electrica,
+            R.drawable.ing11telecom,
+            R.drawable.ing12mecanica,
+            R.drawable.ing13industrial,
+            R.drawable.ing14mecatronica,
+            R.drawable.ing15biomed
+        )
 
         ArrayAdapter.createFromResource(
             this,
@@ -42,7 +59,8 @@ class Formulario : AppCompatActivity() {
                 position: Int,
                 id: Long
             ) {
-                Log.d("LOGTAG", "La carrera seleccionada es $position")
+                imagenCarrera = imagenes[position]
+
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -114,13 +132,24 @@ class Formulario : AppCompatActivity() {
                         val us_signoZ = SignoZodiacal(FechaSeleccionada)
                         val us_HChino = HoroscopoChino(FechaSeleccionada)
 
+                        val us_Imagen = imagenCarrera
+
                         val us_nombre = binding.etNombre.text.toString()
                         val us_apellido = binding.etApellidos.text.toString()
                         val us_cuenta = binding.etNoCuenta.text.toString()
+                        val us_correo = binding.etEmail.text.toString()
 
-                        val usuario = Usuario(us_nombre, us_apellido, us_cuenta,us_edad,us_signoZ,us_HChino)
+                        val usuario = Usuario(
+                            us_nombre,
+                            us_apellido,
+                            us_cuenta,
+                            us_edad,
+                            us_signoZ,
+                            us_HChino,
+                            us_correo,
+                            us_Imagen
+                        )
                         bundle.putParcelable("usuario", usuario)
-
                         intent.putExtras(bundle)
                         startActivity(intent)
                     }
@@ -145,7 +174,7 @@ class Formulario : AppCompatActivity() {
         return edad
     }
 
-//FUNCION QUE AVERIGUA EL SIGNO ZODIACAL
+    //FUNCION QUE AVERIGUA EL SIGNO ZODIACAL
     fun SignoZodiacal(fechaNacimiento: String): String {
         val formatoFecha = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
         val fechaNac = formatoFecha.parse(fechaNacimiento)
@@ -184,7 +213,6 @@ class Formulario : AppCompatActivity() {
             "Rata", "Buey", "Tigre", "Conejo", "Dragón", "Serpiente",
             "Caballo", "Cabra", "Mono", "Gallo", "Perro", "Cerdo"
         )
-
         return animalSignos[(year - 4) % 12]
     }
 
