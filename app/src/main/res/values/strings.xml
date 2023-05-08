@@ -3,12 +3,12 @@
     <string name="version">Versión 1.0</string>
     <string name="creador">Creado por: Brayan Tenorio Ruiz</string>
     <string name="Nombre">Nombre(s)</string>
-    <string name="MsgNombre">\Nombre(s): %1$s \</string>
+    <string name="MsgNombre">"Nombre(s): %1$s "</string>
     <string name="Apellidos">Apellidos</string>
-    <string name="MsgApellidos">\Apellidos: %1$s \</string>
+    <string name="MsgApellidos">"Apellidos: %1$s "</string>
     <string name="Encabezado">FORMULARIO</string>
     <string name="HintCorreo">Correo Electrónico </string>
-    <string name="MsgCorreo">\Correo: %1$s\ </string>
+    <string name="MsgCorreo">"Correo: %1$s "</string>
     <string name="HintNoCuenta">Número de cuenta </string>
     <string name="MsgNoCuenta">Número de cuenta: %1$s </string>
     <string name="Carrera">Carrera</string>
@@ -20,28 +20,57 @@
     <string name="EmailError">correo NO válido</string>
     <string name="Nacimiento">Fecha de Nacimiento</string>
     <string name="FNacimiento">Seleccione su fecha de nacimiento</string>
-    <string name="MsgSignoZodiaco">\Zigno Zodiacal: %1$s\</string>
-    <string name="MsgEdad">\Edad: %1$s años cumplidos\</string>
+    <string name="MsgSignoZodiaco">Zigno Zodiacal: %1$s</string>
+    <string name="MsgEdad">Edad: %1$s años cumplidos</string>
     <string name="BtnAtras">Atrás</string>
-    <string name="MsgHchino">\Horoscopo Chino: %1$s\</string>
+    <string name="MsgHchino">Horoscopo Chino: %1$s</string>
+    <string name="Acuario">Acuario</string>
+    <string name="Piscis">Piscis</string>
+    <string name="Aries">Aries</string>
+    <string name="Tauro">Tauro</string>
+    <string name="Geminis">Geminis</string>
+    <string name="Cancer">Cáncer</string>
+    <string name="Leo">Leo</string>
+    <string name="Virgo">Virgo</string>
+    <string name="Libra">Libra</string>
+    <string name="Escorpio">Escorpio</string>
+    <string name="Sagitario">Sagitario</string>
+
+    <string name="Predeterminado">Selecciona una opción</string>
+    <string name="Aeroespacial">Ingeniería Aeroespacial</string>
+    <string name="Civil">Ingeniería Civil</string>
+    <string name="Geomatica">Ingeniería Geomatica</string>
+    <string name="Ambiental">Ingeniería Ambiental</string>
+    <string name="Geofisica">Ingeniería Geofísica</string>
+    <string name="Geologica">Ingeniería Geológica</string>
+    <string name="Petrolera">Ingeniería Petrolera</string>
+    <string name="Minas">Ingeniería de Minas y Metalurgia</string>
+    <string name="Computo">Ingeniería en Computación</string>
+    <string name="Electrica">Ingeniería Eléctrica Electrónica</string>
+    <string name="Telecom">Ingeniería en Telecomunicaciones</string>
+    <string name="Mecanica">Ingeniería Mecánica</string>
+    <string name="Industrial">Ingeniería Industrial</string>
+    <string name="Mecatronica">Ingeniería Mecatrónica</string>
+    <string name="Biomedica">Ingeniería en Sistemas Biomédicos</string>
+
 
     <string-array name="opciones">
-        <item>Selecciona una opción</item>
-        <item>Ingeniería Aeroespacial </item>
-        <item>Ingeniería Civil </item>
-        <item>Ingeniería Geomática </item>
-        <item>Ingeniería Ambiental </item>
-        <item>Ingeniería Geofísica </item>
-        <item>Ingeniería Geológica </item>
-        <item>Ingeniería Petrolera </item>
-        <item>Ingeniería de Minas y Metalurgia </item>
-        <item>Ingeniería en Computación </item>
-        <item>Ingeniería Eléctrica Electrónica </item>
-        <item>Ingeniería en Telecomunicaciones </item>
-        <item>Ingeniería Mecánica </item>
-        <item>Ingeniería Industrial </item>
-        <item>Ingeniería Mecatrónica </item>
-        <item>Ingeniería en Sistemas Biomédicos </item>
+        <item>@string/Predeterminado</item>
+        <item>@string/Aeroespacial</item>
+        <item>@string/Civil </item>
+        <item>@string/Geomatica </item>
+        <item>@string/Ambiental </item>
+        <item>@string/Geofisica </item>
+        <item>@string/Geologica </item>
+        <item>@string/Petrolera </item>
+        <item>@string/Minas </item>
+        <item>@string/Computo </item>
+        <item>@string/Electrica </item>
+        <item>@string/Telecom</item>
+        <item>@string/Mecanica </item>
+        <item>@string/Industrial </item>
+        <item>@string/Mecatronica </item>
+        <item>@string/Biomedica </item>
 
     </string-array>
 </resources>

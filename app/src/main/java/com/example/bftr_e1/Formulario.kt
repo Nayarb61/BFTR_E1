@@ -188,17 +188,17 @@ class Formulario : AppCompatActivity() {
         val mes = cFechaNac.get(Calendar.MONTH)
 
         when {
-            (mes == 0 && dia >= 20) || (mes == 1 && dia <= 18) -> return "Acuario"
-            (mes == 1 && dia >= 19) || (mes == 2 && dia <= 20) -> return "Piscis"
-            (mes == 2 && dia >= 21) || (mes == 3 && dia <= 19) -> return "Aries"
-            (mes == 3 && dia >= 20) || (mes == 4 && dia <= 20) -> return "Tauro"
-            (mes == 4 && dia >= 21) || (mes == 5 && dia <= 20) -> return "Géminis"
-            (mes == 5 && dia >= 21) || (mes == 6 && dia <= 22) -> return "Cáncer"
-            (mes == 6 && dia >= 23) || (mes == 7 && dia <= 22) -> return "Leo"
-            (mes == 7 && dia >= 23) || (mes == 8 && dia <= 22) -> return "Virgo"
-            (mes == 8 && dia >= 23) || (mes == 9 && dia <= 22) -> return "Libra"
-            (mes == 9 && dia >= 23) || (mes == 10 && dia <= 21) -> return "Escorpio"
-            (mes == 10 && dia >= 22) || (mes == 11 && dia <= 21) -> return "Sagitario"
+            (mes == 0 && dia >= 20) || (mes == 1 && dia <= 18) -> return getString(R.string.Acuario)
+            (mes == 1 && dia >= 19) || (mes == 2 && dia <= 20) -> return getString(R.string.Piscis)
+            (mes == 2 && dia >= 21) || (mes == 3 && dia <= 19) -> return getString(R.string.Aries)
+            (mes == 3 && dia >= 20) || (mes == 4 && dia <= 20) -> return getString(R.string.Tauro)
+            (mes == 4 && dia >= 21) || (mes == 5 && dia <= 20) -> return getString(R.string.Geminis)
+            (mes == 5 && dia >= 21) || (mes == 6 && dia <= 22) -> return getString(R.string.Cancer)
+            (mes == 6 && dia >= 23) || (mes == 7 && dia <= 22) -> return getString(R.string.Leo)
+            (mes == 7 && dia >= 23) || (mes == 8 && dia <= 22) -> return getString(R.string.Virgo)
+            (mes == 8 && dia >= 23) || (mes == 9 && dia <= 22) -> return getString(R.string.Libra)
+            (mes == 9 && dia >= 23) || (mes == 10 && dia <= 21) -> return getString(R.string.Escorpio)
+            (mes == 10 && dia >= 22) || (mes == 11 && dia <= 21) -> return getString(R.string.Sagitario)
             else -> return "Capricornio"
         }
     }

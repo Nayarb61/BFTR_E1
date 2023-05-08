@@ -114,7 +114,6 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/btnColor"
         android:onClick="click"
-        android:shadowColor="@color/btnColor"
         android:text="@string/BtnRegistrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
